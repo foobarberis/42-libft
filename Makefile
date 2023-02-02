@@ -6,7 +6,7 @@
 #    By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 17:06:24 by mbarberi          #+#    #+#              #
-#    Updated: 2023/01/23 22:06:08 by mbarberi         ###   ########.fr        #
+#    Updated: 2023/02/02 13:47:56 by mbarberi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,9 +56,8 @@ SRCS		:=	ft_atoi.c \
 				ft_permute_int.c \
 				get_next_line.c \
 				ft_itoa_base.c \
-				ft_reverse.c
-
-SRCSBONUS	:= 	ft_lstnew.c \
+				ft_reverse.c \
+				ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstsize.c \
 				ft_lstlast.c \
@@ -86,10 +85,8 @@ LINK.o		:=	$(CC) $(LDFLAGS)
 COMPILE.c	:=	$(CC) -I$(INCDIR) $(CFLAGS) -c
 REMOVE		:=	$(RM) $(RMFLAGS)
 
-SOURCES				:=	$(addprefix $(SRCDIR)/, $(SRCS))
-SOURCES_BONUS		:=	$(addprefix $(SRCDIR)/, $(SRCSBONUS))
-OBJECTS				:=	$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SOURCES))
-OBJECTS_BONUS		:=	$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SOURCES_BONUS))
+SOURCES		:=	$(addprefix $(SRCDIR)/, $(SRCS))
+OBJECTS		:=	$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SOURCES))
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@mkdir -p $(@D)
@@ -98,12 +95,8 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 all: $(NAME)
 
 $(OBJECTS): $(HEADERS) Makefile
-$(OBJECTS_BONUS): $(HEADERS) Makefile
 
 $(NAME): $(OBJECTS)
-	ar -rcs $(NAME) $^
-
-bonus: $(OBJECTS) $(OBJECTS_BONUS)
 	ar -rcs $(NAME) $^
 
 clean:
