@@ -6,17 +6,21 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:01:46 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/12/07 16:42:46 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Alloue (avec malloc(3)) et retourne une chaîne de caractères issue de la
-** chaîne 's'. Cette nouvelle chaîne commence à l'index 'start' et a pour taille
-** maximale 'len'.
-*/
+/**
+ * @brief Allocates (with malloc(3)) and returns a substring from the
+ * string s. The substring begins at index 'start' and is of maximum size
+ * 'len'.
+ * @param s The string from which to create the substring.
+ * @param start The start index of the substring in the string s.
+ * @param len The maximum length of the substring.
+ * @return The substring or NULL if the allocation fails.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;

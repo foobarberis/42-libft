@@ -6,16 +6,19 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:56:32 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/12/15 17:39:34 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Using malloc(3), allocate enough memory to store a string representing `n'
-** and return a pointer to the string.
-*/
+/**
+ * @brief Allocates (with malloc(3)) and returns a string representing the
+ * integer received as an argument. Negative numbers must be handled.
+ * @param n The integer to convert.
+ * @return The string representing the integer or NULL if the allocation
+ * fails.
+ */
 char	*ft_itoa(int n)
 {
 	int		l;

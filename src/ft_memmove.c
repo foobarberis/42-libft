@@ -6,38 +6,52 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:57:17 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/11/14 17:57:17 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** The memmove() function copies len bytes from string src to string dst.
-** The two strings may overlap; the copy is always done in a non-destructive
-** manner.
-*/
-void	*ft_memmove(void *dst, const void *src, size_t len)
+/**
+ * @brief The memmove() function copies n bytes from string s to string d.
+ * The two strings may overlap; the copy is always done in a
+ * non-destructive manner.
+ * d < s
+ * s :    foobar
+ * d : foobar
+ *
+ * d > s
+ * s : foobar
+ * d :    foobar
+ * @param d The destination.
+ * @param s The source.
+ * @param n The number of bytes to copy.
+ * @return The original value of d.
+ */
+void *ft_memmove(void *d, const void *s, size_t n)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
+	unsigned char		*pd;
+	const unsigned char	*ps;
 
-	if (!src && !dst)
-		return (dst);
-	i = 0;
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
-	if (d > s)
-		while (len--)
-			d[len] = s[len];
-	else
+	pd = d;
+	ps = s;
+	if (pd == ps)
+		return (pd);
+	if (pd < ps)
 	{
-		while (i < len)
+		while (n)
 		{
-			d[i] = s[i];
-			i++;
+			*pd++ = *ps++;
+			n--;
 		}
 	}
-	return (dst);
+	else
+	{
+		while (n)
+		{
+			n--;
+			pd[n] = ps[n];
+		}
+	}
+	return (d);
 }

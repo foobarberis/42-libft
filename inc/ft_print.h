@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_print.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 13:53:30 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/02 14:09:11 by mbarberi         ###   ########.fr       */
+/*   Created: 2023/02/02 15:13:50 by mbarberi          #+#    #+#             */
+/*   Updated: 2023/02/03 17:32:23 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINT_H
+# define FT_PRINT_H
 
-/**
- * @brief Compute the absolute value of the integer n.
- * @param n The number we want to compute.
- * @return An unsigned integer to ensure that we can compute abs(INT_MIN).
- */
-uintmax_t ft_abs(intmax_t n)
-{
-	if (n < 0)
-		return (-n);
-	else
-		return (n);
-}
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
+#endif

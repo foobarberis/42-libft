@@ -6,24 +6,33 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:00:03 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/12/12 17:09:28 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:03 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** The ft_putnbr_fd() function writes the number n to corresponding file
-** descriptor.
-*/
+/**
+ * @brief Outputs the string 's' to the given file descriptor.
+ * @param c The string to output.
+ * @param fd The file descriptor on which to write.
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	nbr;
+	int		i;
+	char	num[32];
 
-	nbr = ft_abs(n);
+	i = 0;
+	if (!n)
+		return (ft_putchar_fd('0', fd));
 	if (n < 0)
 		ft_putchar_fd('-', fd);
-	if (nbr > 9)
-		ft_putnbr_fd(nbr / 10, fd);
-	ft_putchar_fd(nbr % 10 + '0', fd);
+	n = ft_abs(n);
+	while (n)
+	{
+		num[i++] = n % 10 + '0';
+		n /= 10;
+	}
+	while (--i >= 0)
+		ft_putchar_fd(num[i], fd);
 }

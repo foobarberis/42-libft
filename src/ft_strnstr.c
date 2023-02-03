@@ -6,33 +6,39 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:01:36 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/11/22 15:42:59 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** The strnstr() function locates the first occurrence of the
-** NUL-terminated string little in the string big, where not more than len
-** characters are searched.
-*/
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+/**
+ * @brief The strnstr(3) function locates the first occurrence of the
+ * NUL-terminated string n in the string h, where not more than m
+ * characters are searched.
+ * @param h The string to search (haystack).
+ * @param n The string to find (needle).
+ * @param m The maximum number of characters to scan.
+ * @return  h if n is an empty string; if n occurs nowhere in h, NULL is
+ * returned; otherwise a pointer to the first character of the first
+ * occurrence of n is returned.
+ */
+char	*ft_strnstr(const char *h, const char *n, size_t m)
 {
 	size_t	i;
 	size_t	j;
 
-	if (!*little)
-		return ((char *)(big));
+	if (!*n)
+		return ((char *)(h));
 	i = 0;
-	while (i < len && big[i])
+	while (i < m && h[i])
 	{
 		j = 0;
-		while ((i + j) < len && little[j] == big[i + j])
+		while ((i + j) < m && n[j] == h[i + j])
 		{
 			j++;
-			if (!little[j])
-				return ((char *)(big + i));
+			if (!n[j])
+				return ((char *)(h + i));
 		}
 		i++;
 	}

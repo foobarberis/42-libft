@@ -6,13 +6,17 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 19:06:44 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/11/15 14:48:27 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:14 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Renvoie le dernier élément de la liste. */
+/**
+ * @brief Returns the last node of the list.
+ * @param lst The beginning of the list.
+ * @return The last node of the list
+ */
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*p;

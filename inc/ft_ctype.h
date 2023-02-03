@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_ctype.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 13:53:30 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/02 14:09:11 by mbarberi         ###   ########.fr       */
+/*   Created: 2023/02/02 14:43:47 by mbarberi          #+#    #+#             */
+/*   Updated: 2023/02/02 16:28:24 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_CTYPE_H
+# define FT_CTYPE_H
 
-/**
- * @brief Compute the absolute value of the integer n.
- * @param n The number we want to compute.
- * @return An unsigned integer to ensure that we can compute abs(INT_MIN).
- */
-uintmax_t ft_abs(intmax_t n)
-{
-	if (n < 0)
-		return (-n);
-	else
-		return (n);
-}
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
+int	ft_isupper(int c);
+int	ft_islower(int c);
+int	ft_isspace(int c);
+int	ft_toupper(int c);
+int	ft_tolower(int c);
+
+#endif

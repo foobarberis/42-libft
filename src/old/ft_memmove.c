@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 13:53:30 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/02 14:09:11 by mbarberi         ###   ########.fr       */
+/*   Created: 2023/02/02 19:06:56 by mbarberi          #+#    #+#             */
+/*   Updated: 2023/02/02 19:06:58 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-/**
- * @brief Compute the absolute value of the integer n.
- * @param n The number we want to compute.
- * @return An unsigned integer to ensure that we can compute abs(INT_MIN).
- */
-uintmax_t ft_abs(intmax_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (n < 0)
-		return (-n);
+	size_t				i;
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	if (!src && !dst)
+		return (dst);
+	i = 0;
+	d = dst;
+	s = src;
+	if (d > s)
+		while (len--)
+			d[len] = s[len];
 	else
-		return (n);
+	{
+		while (i < len)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return (dst);
 }

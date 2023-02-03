@@ -6,16 +6,18 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 19:06:42 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/12/07 16:42:46 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:14 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Itère sur la liste 'lst' et applique la fonction 'f' au contenu chaque
-** élément.
-*/
+/**
+ * @brief Iterates the list 'lst' and applies the function 'f' on the
+ * content of each node.
+ * @param lst The address of a pointer to a node.
+ * @param f The address of the function used to iterate on the list.
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*p;

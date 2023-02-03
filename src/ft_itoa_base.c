@@ -6,12 +6,17 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 16:05:57 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/01/23 22:05:02 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Search a string for duplicate characters.
+ * @param s The string to search.
+ * @return 1 if a duplicate is found, else returns 0.
+ */
 static int	ft_hasduplicates(char *s)
 {
 	int	i;
@@ -33,6 +38,13 @@ static int	ft_hasduplicates(char *s)
 	return (0);
 }
 
+/**
+ * @brief Check if the string represents a valid base. A valid base does as
+ * at least two characters, does not have have duplicates and does not
+ * contain the '+' or '-' characters.
+ * @param base The string representing the base.
+ * @return 1 if the string represent a valid base, else returns 0.
+ */
 static int	ft_valid_base(char *base)
 {
 	if (!base[0] || !base[1])
@@ -48,6 +60,14 @@ static int	ft_valid_base(char *base)
 	return (1);
 }
 
+/**
+ * @brief Converts an integer into a string representing that integer in
+ * the given base.
+ * @param n The integer to convert.
+ * @param base The string representing the base.
+ * @return The string representing the integer or NULL if the allocation
+ * fails.
+ */
 char	*ft_itoa_base(intmax_t n, char *base)
 {
 	char	*p;

@@ -6,28 +6,42 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:01:19 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
+/*   Updated: 2022/12/07 17:04:22 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief The strlcat(3) function appends the NUL-terminated string s to
- * the end of d. It will append at most n - strlen(d) - 1 bytes,
- * NUL-terminating the result. d and s must not overlap.
- * @param d The destination.
- * @param s The source.
- * @param n The destination's size.
- * @return The total length of the string the function tried to create.
- * That means the initial length of d plus the length of s.
- */
-size_t	ft_strlcat(char *d, const char *s, size_t n)
+/*
+** The strlcat() function appends the NUL-terminated string src to the end
+** of dst.  It will append at most size - strlen(dst) - 1 bytes,
+** NUL-terminating the result.
+*/
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t l;
+	size_t		n;
+	size_t		dlen;
+	char		*od;
+	char		*os;
 
-	l = ft_strnlen(d, n);
-	if (l == n)
-		return (l + ft_strlen(s));
-	return (l + ft_strlcpy(d + l, s, n - l));
+	n = dstsize;
+	od = dst;
+	os = (char *)src;
+	while (n-- && *dst)
+		dst++;
+	dlen = dst - od;
+	n = dstsize - dlen;
+	if (!n--)
+		return (dlen + ft_strlen(src));
+	while (*src)
+	{
+		if (n)
+		{
+			*dst++ = *src;
+			n--;
+		}
+		src++;
+	}
+	*dst = '\0';
+	return (dlen + (src - os));
 }

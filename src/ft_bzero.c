@@ -6,20 +6,19 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:54:02 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/12/09 13:30:10 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** The bzero() function writes len zero bytes to the string b.  If len is
-** zero, bzero() does nothing.
-*/
-void	ft_bzero(void *b, size_t len)
+/**
+ * @brief  The bzero(3) function writes n zeroed bytes to the string s. If
+ * n is zero, bzero(3) does nothing.
+ * @param s The string to write to.
+ * @param n The number of bytes.
+ */
+void	ft_bzero(void *s, size_t n)
 {
-	if (!len)
-		return ;
-	while (len--)
-		*(char *)b++ = '\0';
+	ft_memset(s, 0, n);
 }

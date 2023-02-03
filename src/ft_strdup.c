@@ -6,28 +6,28 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:01:09 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/11/16 14:00:15 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** The strdup() function allocates sufficient memory for a copy of
-** the string str, does the copy, and returns a pointer to it. The
-** pointer may subsequently be used as an argument to the function
-** free(3).
-*/
-char	*ft_strdup(const char *str)
+/**
+ * @brief The strdup(3) function allocates sufficient memory for a copy of
+ * the string s, does the copy, and returns a pointer to it. The pointer
+ * may subsequently be used as an argument to the function free(3).
+ * @param s The string to duplicate.
+ * @return A pointer to the duplicate if the copy is successful, NULL if an
+ * error occured.
+ */
+char *strdup(const char *s)
 {
+	char	*d;
 	size_t	l;
-	char	*p;
 
-	l = ft_strlen(str);
-	p = malloc(l + 1);
-	if (!p)
+	l = ft_strlen(s);
+	d = malloc(l + 1);
+	if (!d)
 		return (NULL);
-	ft_memcpy(p, str, l);
-	p[l] = '\0';
-	return (p);
+	return (ft_memcpy(d, s, l + 1));
 }

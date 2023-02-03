@@ -6,17 +6,20 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:01:43 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/12/07 17:18:46 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Alloue (avec malloc(3)) et retourne une copie de la chaîne 's1', sans les
-** caractères spécifiés dans 'set' au début et à la fin de la chaîne de
-**  caractères.
-*/
+/**
+ * @brief Allocates (with malloc(3)) and returns a copy of ’s1’ with the
+ * characters specified in ’set’ removed from the beginning and the end of
+ * the string.
+ * @param s1 The string to be trimmed.
+ * @param set The reference set of characters to trim.
+ * @return The trimmed string or NULL if the allocation fails.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	len;

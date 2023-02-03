@@ -6,18 +6,19 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:28:25 by mbarberi          #+#    #+#             */
-/*   Updated: 2022/12/07 16:42:46 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Applique la fonction 'f' à chaque caractère de la chaîne de caractères
-** transmise comme argument, et en passant son index comme premier argument.
-** Chaque caractère est transmis par adresse à 'f' afin d'être modifié si
-** nécessaire.
-*/
+/**
+ * @brief Applies the function f on each character of the string passed as
+ * argument, passing its index as first argument. Each character is passed
+ * by address to f to be modified if necessary.
+ * @param s The string on which to iterate.
+ * @param f The function to apply to each character.
+ */
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	char	*p;
