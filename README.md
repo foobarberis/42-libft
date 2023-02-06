@@ -1,2 +1,2 @@
 # 42-libft
-Library of function for 42School.
+Library of functions for 42School.
