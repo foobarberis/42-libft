@@ -6,7 +6,7 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:46:31 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/03 18:20:44 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/06 14:25:06 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,7 @@
 # include "ft_list.h"
 # include "ft_stdlib.h"
 # include "ft_string.h"
-
-/* DEFINES */
-# define OCTAL "01234567"
-# define HX_LO "0123456789abcdef"
-# define HX_HI "0123456789ABCDEF"
-
-/* EXTRAS */
-
+# include "get_next_line.h"
 
 /* PERSONAL */
 int			ft_permute(void *b, int n);

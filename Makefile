@@ -6,7 +6,7 @@
 #    By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 17:06:24 by mbarberi          #+#    #+#              #
-#    Updated: 2023/02/03 18:29:42 by mbarberi         ###   ########.fr        #
+#    Updated: 2023/02/06 13:57:53 by mbarberi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,9 +66,11 @@ SRCS		:=	ft_abs.c \
 				ft_strtrim.c \
 				ft_substr.c \
 				ft_tolower.c \
-				ft_toupper.c
+				ft_toupper.c \
+				ft_gnl.c \
+				ft_gnl_utils.c
 
-CC			:=	gcc
+CC			:=	cc
 RM			:=	rm
 
 CFLAGS		:=	-Wall -Wextra -Werror
