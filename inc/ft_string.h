@@ -6,7 +6,7 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 15:09:32 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/03 16:48:23 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:45:58 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /* NON-STANDARD */
+void		ft_reverse(char *s);
 void		*ft_memrchr(const void *s, int c, size_t n);
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 char		*ft_substr(char const *s, unsigned int start, size_t len);
@@ -43,5 +44,5 @@ char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char		*ft_itoa_base(intmax_t n, char *base);
-void		ft_reverse(char *s);
+t_list		*ft_strtolst(const char *s, t_list *lst);
 #endif

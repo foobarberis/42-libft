@@ -6,7 +6,7 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:57:17 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:51:38 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
  * @param n The number of bytes to copy.
  * @return The original value of d.
  */
-void *ft_memmove(void *d, const void *s, size_t n)
+void	*ft_memmove(void *d, const void *s, size_t n)
 {
 	unsigned char		*pd;
 	const unsigned char	*ps;

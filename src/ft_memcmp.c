@@ -6,7 +6,7 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:57:10 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:50:37 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@
 *
 * If n is zero, the return value is zero.
  */
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char *p1;
-	const unsigned char *p2;
+	const unsigned char	*p1;
+	const unsigned char	*p2;
 
 	p1 = s1;
 	p2 = s2;

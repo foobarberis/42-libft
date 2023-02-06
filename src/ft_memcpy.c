@@ -6,7 +6,7 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:57:14 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:50:57 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
  */
 void	*ft_memcpy(void *d, const void *s, size_t n)
 {
-	unsigned char *pd;
-	const unsigned char *ps;
+	unsigned char		*pd;
+	const unsigned char	*ps;
 
 	pd = d;
 	ps = s;

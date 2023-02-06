@@ -6,7 +6,7 @@
 #    By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 17:06:24 by mbarberi          #+#    #+#              #
-#    Updated: 2023/02/06 17:29:29 by mbarberi         ###   ########.fr        #
+#    Updated: 2023/02/06 17:47:46 by mbarberi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ SRCS		:=	ft_abs.c \
 				ft_substr.c \
 				ft_tolower.c \
 				ft_toupper.c \
+				ft_strtolst.c \
 				ft_gnl.c \
 				ft_gnl_utils.c \
 				ft_printf.c \

@@ -6,7 +6,7 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 19:37:03 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/03 18:22:42 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:50:25 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
  */
 void	*ft_memrchr(const void *s, int c, size_t n)
 {
-	const unsigned char *ps;
+	const unsigned char	*ps;
 
 	ps = s;
 	c = (unsigned char)c;
