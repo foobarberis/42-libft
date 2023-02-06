@@ -6,12 +6,14 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 12:20:24 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/06 14:37:41 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:30:10 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+
+# include <stdio.h> /* required for EOF */
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 32
