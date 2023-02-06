@@ -6,7 +6,7 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:01:09 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/06 17:52:07 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/06 18:19:04 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * @return A pointer to the duplicate if the copy is successful, NULL if an
  * error occured.
  */
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*d;
 	size_t	l;
