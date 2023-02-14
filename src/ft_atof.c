@@ -1,30 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atof.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 13:53:46 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/14 19:14:24 by mbarberi         ###   ########.fr       */
+/*   Created: 2023/02/14 19:11:17 by mbarberi          #+#    #+#             */
+/*   Updated: 2023/02/14 19:21:57 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Compute the decimal part of the string */
+static double	ft_atof__dec(const char *s)
+{
+	double	y;
+	double	scale;
+
+	y = 0;
+	scale = 10;
+	if (*s && *s == '.')
+	{
+		s++;
+		while (*s && ft_isdigit(*s))
+		{
+			y += (*s++ - '0') / scale;
+			scale *= 10;
+		}
+	}
+	return (y);
+}
+
 /**
- * @brief The atoi(3) function converts the initial portion of the string
- * pointed to by s to int representation.
+ * @brief The atof(3) function converts the initial portion of the string
+ * pointed to by s to double.
  * @param s The string to convert.
- * @return An int corresponding to s. If an error occured during the
+ * @return A double corresponding to s. If an error occured during the
  * processing of the string (if the string contains non-digit characters
  * for example) return the number computed up to the point the error
  * occured.
  */
-int	ft_atoi(const char *s)
+double	ft_atof(const char *s)
 {
-	int			x;
-	int			sign;
+	double	x;
+	double	sign;
 
 	x = 0;
 	sign = 1;
@@ -34,7 +54,7 @@ int	ft_atoi(const char *s)
 		sign *= -1;
 	if (*s == '-' || *s == '+')
 		s++;
-	while (ft_isdigit(*s))
+	while (*s && ft_isdigit(*s))
 		x = x * 10 + *s++ - '0';
-	return (x * sign);
+	return ((x + ft_atof__dec(s)) * sign);
 }

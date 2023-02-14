@@ -6,7 +6,7 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 14:45:54 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/06 17:53:27 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/14 19:12:59 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 
 int		ft_atoi(const char *s);
+double	ft_atof(const char *s);
 void	*ft_calloc(size_t n, size_t m);
 
 #endif

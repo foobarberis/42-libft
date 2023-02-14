@@ -6,7 +6,7 @@
 #    By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 17:06:24 by mbarberi          #+#    #+#              #
-#    Updated: 2023/02/06 17:47:46 by mbarberi         ###   ########.fr        #
+#    Updated: 2023/02/14 19:15:13 by mbarberi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@
 NAME		:=	libft.a
 
 SRCS		:=	ft_abs.c \
+				ft_atof.c \
 				ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
