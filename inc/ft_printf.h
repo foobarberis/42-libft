@@ -6,7 +6,7 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 13:54:23 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/06 17:30:31 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/16 15:01:59 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int			printf__putchar_fd(char c, int fd);
 
 /* FT_UTILS_UTILS */
 int			printf__putstr_fd(char *s, int fd);
-int			printf__putnbr_base(uint64_t n, char *base);
+int			printf__putnbr_base(long n, char *base);
 int			printf__putnbr_fd(int64_t n, int fd);
 
 #endif
