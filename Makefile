@@ -6,7 +6,7 @@
 #    By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 17:06:24 by mbarberi          #+#    #+#              #
-#    Updated: 2023/02/14 19:15:13 by mbarberi         ###   ########.fr        #
+#    Updated: 2023/02/16 13:58:30 by mbarberi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,9 @@ SRCS		:=	ft_abs.c \
 				ft_gnl.c \
 				ft_gnl_utils.c \
 				ft_printf.c \
-				ft_printf_utils.c
+				ft_printf_utils.c \
+				ft_isint.c \
+				ft_isreal.c
 
 CC			:=	cc
 RM			:=	rm

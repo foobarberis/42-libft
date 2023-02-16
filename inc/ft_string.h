@@ -6,7 +6,7 @@
 /*   By: mbarberi <mbarberi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 15:09:32 by mbarberi          #+#    #+#             */
-/*   Updated: 2023/02/06 17:45:58 by mbarberi         ###   ########.fr       */
+/*   Updated: 2023/02/16 13:58:50 by mbarberi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /* NON-STANDARD */
+int			ft_isint(const char *s);
+int			ft_isreal(const char *s);
 void		ft_reverse(char *s);
 void		*ft_memrchr(const void *s, int c, size_t n);
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
